@@ -2,6 +2,7 @@ const int trigPin = 12;
 const int echoPin = 11;
 const int light = 5;
 const int button = 9;
+const int speaker = 10;
 
 void setup() {
   Serial.begin(9600);
@@ -9,10 +10,11 @@ void setup() {
   pinMode(echoPin, INPUT);
   pinMode(light, OUTPUT);
   pinMode(button, INPUT_PULLUP);
+  pinMode(speaker, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(trigPin, LOW);
+  /*digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
@@ -36,5 +38,19 @@ void loop() {
     Serial.println("No echo detected");
   }
 
-  delay(50);
+  delay(50);*/
+
+  // Tone 1: 1000 Hz for 150 milliseconds
+  tone(speaker, 1000);
+  delay(150);
+  
+  // Tone 2: 1500 Hz for 250 milliseconds
+  tone(speaker, 1500);
+  delay(250);
+  
+  // Turn off the sound
+  noTone(speaker);
+  
+  // Wait 5 seconds before repeating the alert
+  delay(500);
 }
