@@ -8,11 +8,11 @@
 #include "freertos/task.h"
 
 // ---------- Connection settings ----------
-const char* ssid = "iGabriel ";
-const char* password = "Pa23word";
+const char* ssid = "HOTSPOT_NAME";
+const char* password = "HOTSPOT_PASSWORD";
 
-const char* BOT_TOKEN = "8965122333:AAH4AT_ObViXJAj5UXGiNppQ7l4d6RzsW3s";
-const char* CHAT_ID = "-5366724163";
+const char* BOT_TOKEN = "TELEGRAM_TOKEN";
+const char* CHAT_ID = "GROUP_ID";
 
 // ---------- Arduino Nano ESP32 pins ----------
 const int switchPin = D8;
